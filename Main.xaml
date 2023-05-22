@@ -1,0 +1,860 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="947,844" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="548,779" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="Products" />
+      <Variable x:TypeArguments="x:String" Name="Total" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="IsLogin" />
+      <Variable x:TypeArguments="x:String" Default="744" Name="InvoiceTotal" />
+      <Variable x:TypeArguments="x:String" Default="8975" Name="InvoicePaymentTransaction" />
+      <Variable x:TypeArguments="x:String" Default="Nombre Cliente" Name="ClientName" />
+      <Variable x:TypeArguments="x:String" Default="RUC Cliente" Name="ClientRUC" />
+      <Variable x:TypeArguments="x:String" Default="00" Name="ClientDV" />
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="DBConnection" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Invoices" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="486,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=172.0.0.65;Initial Catalog=VISION_WEB;Persist Security Info=True;User ID=BotPos;Password=BotPos.2023;Encrypt=False" DatabaseConnection="[DBConnection]" />
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dt_Invoices]" DisplayName="Run query" ExistingDbConnection="[DBConnection]" sap:VirtualizedContainerService.HintSize="486,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="Select [ID_ORDER_HEADER]&#xD;&#xA;      ,[ID_EC_PRODUCT]&#xD;&#xA;      ,[NAME]&#xD;&#xA;      ,[PRODUCT_ID]&#xD;&#xA;      ,[QUANTITY]&#xD;&#xA;      ,[QUANTITY_DISPATCHED]&#xD;&#xA;      ,[SUBTOTAL]&#xD;&#xA;      ,(Case When ECP.PRODUCT_TYPE In ('S', 'V2') THEN OD.[SKU]&#xD;&#xA;             Else ECP.SKU_FATHER End) As PRODUCT_CODE&#xD;&#xA;      ,OD.[PRICE] As EC_PRICE&#xD;&#xA;     From [VISION_WEB].[dbo].[GP_EC_ORDER_DETAIL] OD&#xD;&#xA;  INNER Join [VISION_WEB].[dbo].GP_EC_PRODUCT ECP On OD.SKU = ECP.SKU&#xD;&#xA;  Where ID_ORDER_HEADER = 7621">
+      <ui:ExecuteQuery.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:ExecuteQuery.Parameters>
+    </ui:ExecuteQuery>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[dt_Invoices.Rows.Count.ToString]" />
+    <ui:DatabaseDisconnect DatabaseConnection="[DBConnection]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="486,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,242" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="Sequence_31">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: New TightVNC Connection" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="cf9ccb5f-f974-4093-9314-ccce0e36fe77" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do - main flow" sap:VirtualizedContainerService.HintSize="610,6696" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Remote Host'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="cf9ccb5f-f974-4093-9314-ccce0e36fe77" Text="192.168.0.13" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CvElementArea="106, 54, 201, 22" CvTextArea="112, 59, 68, 11" CvTextArgument="192.168.0.13" CvType="InputBox" DesignTimeRectangle="110, 58, 177, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'192.168.0.13'" FullSelectorArgument="&lt;wnd ctrlid='1048' /&gt;&lt;wnd ctrlid='1001' /&gt;&lt;ctrl name='Remote Host:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1048' /&gt;&lt;wnd ctrlid='1001' /&gt;&lt;ctrl name='Remote Host:' role='editable text' automationid='' /&gt;" Guid="56ff8582-12d8-4028-ad8e-955740874e41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALUAAAATCAYAAADWFkxaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVGhD7ZtNbsIwEEZznJ6BA3GG3qDbHIMTsOQQFVIXSOwQEmLFpuymGf/E44ltkqqbSb8nfSo29jgpLyaN1O7z+k0ArIku/ARgNRSl7t6/kCH08RZ+I8ASkLoRSG0TSN0IpLbJC6kvtL/daSPbYQzRg7axv7/TKfQyp8M5jK9F1x2ye4TZYn5W90l9L8ZnqRxXNa3zGjheXD+ktklV6s3h6Rvjh3+m/ka03wURWML43vB67HeC1AWc1h3ihNYy8nqijlxPZXtMx+XqBylLqa2fjj+tC6lt0t6peaccP3yWVYqn2zFKxlKyuixlabyqo+akqOOojhNpjkn1ILVNFkot5avIu1gqrpuT7/qR2oWipJ60CykeI58Pr5PmQmqbLJA6tMMYj5ZHi1/JRGpRx63h2+m2IghXvK34K6lj0jlAapssk1pm8t5MoTktqeM3wE7Xr3wz6PlNYUNejIkXE6S2yS+l9jtn/pSiIJzrL+yaqi5LlNfiOSyruBWRtVTd6h+KM9ffHB7i2LFTW6cq9fiUIOCkcU8pPPKxnR7LuPcLUhXrjvezjLg43PyI7pd1/QXgEf1z1xfnxcQLBFLbpL1T//NAaptA6kYgtU2KUgNgGUgNVgekBqsD//kCVgbRD32E4HtqnBRFAAAAAElFTkSuQmCC" InformativeScreenshot="7ea993aa512003b006c74cadc69d13fd.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='tvnviewer.exe' cls='#32770' title='New TightVNC Connection' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArgument="Remote Host:" CvType="Text" DesignTimeRectangle="27, 59, 77, 16" ElementType="Text" FriendlyName="'Remote Host'" FullSelectorArgument="&lt;wnd ctrlid='1045' title='Remote Host:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1045' title='Remote Host:' check:text='Remote Host:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAUCAYAAAD1GtHpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVFhH7ZbblYQgDIatinqoRnrRWqQUtYMsiVwCRkd22JeVh+8cCLn+R5gZtm2Dp+z73hGoEhGRkrydLmIDuogN6CI2IIqohgGGiIJxOQuISEmqsQaUMmClMwnJvzZH4LdxNyQR1QhLEGsZnagaprBnSEmq+W8irutK4mQibhNoLiKJmr5SY10wNaNBq8OuZwsmrn0B9IlxGmYqmvwQZWzh5/OzJsXBuU2ss4M1ytsc5HtVW6hZgSzipF3RsM8Fjc3z4rPz52tqeHZxSVAaSM9HYS4A+aXB8zNmC2Jw7upQTMo7a78u85NfKxGz5sqrzc4I1xBvRlqLzQqDkF3IH+JK/9JWnlE+jD/EfZTrS85fYvke4p6JGoN5M9K6bBb3VyJyPwnJJ9jKM9xnwhViPqlXyfV1jkLidXbXZaoU8dN1joPmfiLS4J/quHONbx7541vor2xWO+z/4k10LCM+yv6vTnmlsXk+2N06xvGvA9+ow37+YXGE+ADPKdnEOuELPKA6PvZcu5GINUiJ3kwXsQFdxAZ0ERvQRWwAiVgrpJTozXQRv2aHH/aEV30ti4xmAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="548,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cf9ccb5f-f974-4093-9314-ccce0e36fe77" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="317, 54, 91, 23" CvTextArea="340, 60, 43, 11" CvTextArgument="Connect" CvType="Button" DesignTimeRectangle="317, 54, 90, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='Connect' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='Connect' check:text='unchecked' /&gt;" Guid="135384ab-c1cc-4e36-91ef-6f334d01f452" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAbCAYAAAD1RzixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHySURBVGhD7ZkxbsIwFEBzA84TiRtwDk/t1qUT9AR4Y2tv4YVKrVoO0ApVDKkY2IoAKQtLK/Sbb5zEdpyIJiSWyh+ehL8dE56/f5ATxHEMRPeQeE+QeE8UxM9XO+hPPqF3t4Dg9oNoyOB+KZ3ang3xOACFjx7XsNv/wOFwIBqADsezDfRGi4J8Q/zgYQl8tnVOQtRnOP2SVUR3bYjHrUGZfn52+2+Z9YZro5GId11INAfdGq6NBolvDRLvCf/iBYMgCHKYcI/rgohDGHKIXH1nxqv4iIeJbAZCiwlmtjvlMsRHwMMQeOTqS0AJ2U5Qi6HEcJbvECYq4oV59O8TwLI4jsf7ydshj/J7aQF/4qWQsuw+SknlyZ2BJUhJzKRimcIMLYvLebTvUAsUyUXXxhf6rXgL+BVf9iPtPik2EeiKY7sqrjI4xzGPfZ0dbwF/4mU2lpQal8i64vW43X9qvAU8iq96uFaUmlMEZ21znpyKUmPdT1t4FY8c5WulIP07KSVo5SGN/Um8+qzPXxJPF0GoB/T/fbheOCTeE5Xi8SyeTifPD55OVorHM+PhdO28mKjP+HUj30Tprg3x89VWZj2+NaHMbw46xJcg6BTd6q4N8QgOGEzeIbh+huDqiWhA7+YF+vytIB0piCe6gcR7gsR7IYZf2hxZvK/LVvUAAAAASUVORK5CYII=" InformativeScreenshot="6dd1286769eb7bb66da6c4bd651f3004.png" ScopeSelectorArgument="&lt;wnd app='tvnviewer.exe' cls='#32770' title='New TightVNC Connection' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="317, 85, 91, 23" CvTextArea="335, 91, 50, 12" CvTextArgument="Options..." CvType="Button" DesignTimeRectangle="317, 85, 90, 23" ElementType="Button" FriendlyName="'&amp;Options...'" FullSelectorArgument="&lt;wnd ctrlid='1046' title='&amp;amp;Options...' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1046' title='&amp;amp;Options...' check:text='&amp;amp;Options...' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAbCAYAAAD1RzixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHgSURBVGhD7ZlBrsIgEEB7LQ7EeTgNG4030MS4MhxAo3HRtcbM79BCB4rW2Ab6/5/FS2GESXwDJaFVXdfA5IfFF4LFF2Ig/na7wfF4hMPhAPv9npmIMcY6jT0H4nEACj+fz/B4POD5fDITQIeXy8U6jeUH4rE61+s1mYT5ntPpZN8i1HUgHrfG/X5PTma+B53iqqeuB+JTE5npoFvqmsVngsUXIqt4owRUVeURyiTHBRgFQigwcfuXk028lR5I0yA/kf+HZFMyiUfJApSJ4k6qfUqQot8NUuMYA4rEhJTh6u/iVSVBk3xK9nPaPNFuW0Ah84h/uWqxII00K5EURsuBTC/bttvdEkiV2hfDxW0eHG/jXb4G3RTQtUuxHPHB72SH0N9cOx6P/VQe328L5Yu5APKIpyJp/JXI2cV3/QUVIJP4kcM1FuReEdh2Ul3bxtu5yVcNzeP6zVP6QxzPDVJUWoSx/oxkE48EBxwR1/7BPh6vSN0dlp8ergPxfqV3eVwRYrFj/RnJKv4lsbB/AIsvxFvxeIPGt5Pzg07fisc7Y7w7Tk1mvgc/huC3Duo6EO++QOFAXvnTQYe4kEe/QCE4YLfbwXq9htVqxUxgs9nAdrsdSEcG4pk8sPhCsPgi1PADvy4i52I2QFkAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="cf9ccb5f-f974-4093-9314-ccce0e36fe77" Text="[&quot;istech07&quot; + &quot;[k(Enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CvType="InputBox" DesignTimeRectangle="108, 73, 152, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1043' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1043' /&gt;" Guid="89157f55-9408-4496-98a5-11ffae34eaea" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJwAAAAYCAYAAAAPmZSDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVGhD7dIxDoJAFEVRVuPW3ISLs3MVYkNMVAjTU4yZxgY64VXnJK/6v7xdKaWapSY4i+4X3DzPdZqmOo6j2W5rTT2en3Vw7bgsS4U9tab64b0dHBzhPrwER47giBIcUYIjSnBECY4owRElOKIER5TgiBIcUYIjSnBECY4owRG1GVx3vpodtlVwp8tt89Hs37W2VsGZJSY4C67UL1kCdB/Ne88ZAAAAAElFTkSuQmCC" InformativeScreenshot="4e946a51c1f91ba693cee71a6f07b970.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='tvnviewer.exe' cls='#32770' title='Vnc Authentication' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="27, 76, 77, 16" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;wnd cls='Static' title='Password:' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Static' title='Password:' check:text='Password:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAUCAYAAAD1GtHpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGWSURBVFhH7ZTh0YMgDIadinmYRnaRWWQUZYN8SUwQLO2d93HVnvx4r/ASYvOYOCzLAuu6nlKMsSsTQzwLspboyeoQG6hDbKDfhBgcGOMg1M4uUIJohgGGJAtTBZ6qluirui1EM8KsoCYLQ74/qJboq/oJiOsEVrpxHk3WoQbGeYsJLvOloBcvL5bWmNPzgwM4I2v25Y6eyz1nD16KQxV5DbhAea9RFSKDq3UidaidYJ3HDEgEb3FdQBIven4Z5BFgi571dI4+Q6DzQTx5CdYnYOpzfL4XyPeDqG+YlANkYMcz6lTa79C00NIjmFuBCbRC0l+FQWIgEnf0P+0v1ptxzgHuI8x7idsS1MCVHnegR4+LljH20pGPgZj5aczRty5IEgKD3ebdq0cjhgVbXBs5Cw4BYldu41eOaTHOBSSK20eW4/ScYu/4Tcw18cd9k8HitzgdZ/EZkHZg7tFDSgARuzABIDEEvScdXes0uqe5+X/cECLpCPCTasmeqg6xgTrEBuoQG6hDbKAC4hmQtWRPVYf4b0X4A64Lw+jo+NhZAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <Sequence DisplayName="Sequence - Cashier login" sap:VirtualizedContainerService.HintSize="548,81" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[&quot;5555&quot; +&quot;[k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8df8db38-7d04-4519-9c25-8dc2a2b369bb" InformativeScreenshot="27b71eea7163937b5afd3c90287f7255" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[&quot;5555&quot; + &quot;[k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8df8db38-7d04-4519-9c25-8dc2a2b369bb" InformativeScreenshot="27b71eea7163937b5afd3c90287f7255" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="esc" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b7a530-b9f5-48c1-b64a-30a751308ad3" InformativeScreenshot="c1d7da9bc95fab1a0cdf454ace4a8f5e" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="esc" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b7a530-b9f5-48c1-b64a-30a751308ad3" InformativeScreenshot="c1d7da9bc95fab1a0cdf454ace4a8f5e" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="esc" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b7a530-b9f5-48c1-b64a-30a751308ad3" InformativeScreenshot="c1d7da9bc95fab1a0cdf454ace4a8f5e" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="1000" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="esc" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b7a530-b9f5-48c1-b64a-30a751308ad3" InformativeScreenshot="c1d7da9bc95fab1a0cdf454ace4a8f5e" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="1000" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="esc" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19b7a530-b9f5-48c1-b64a-30a751308ad3" InformativeScreenshot="c1d7da9bc95fab1a0cdf454ace4a8f5e" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                  </Sequence>
+                  <Delay Duration="00:00:02.5000000" sap:VirtualizedContainerService.HintSize="548,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <Sequence DisplayName="Sequence - Sale type selection (Venta Online)" sap:VirtualizedContainerService.HintSize="548,666" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'F6': otras ventas" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="f6" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1b243f5c-765e-4c8e-88ae-0aef61abe458" InformativeScreenshot="f30c5190b0fab0f2fd5e67408a8338f0" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'down': move one level down" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="down" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1b243f5c-765e-4c8e-88ae-0aef61abe458" InformativeScreenshot="f30c5190b0fab0f2fd5e67408a8338f0" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'F8': Venta Online" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="f8" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1b243f5c-765e-4c8e-88ae-0aef61abe458" InformativeScreenshot="f30c5190b0fab0f2fd5e67408a8338f0" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - Products" sap:VirtualizedContainerService.HintSize="548,674" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:BuildDataTable DataTable="[Products]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Code&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;500&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Units&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Code&gt;1042&lt;/Code&gt;&#xA;    &lt;Description&gt;1042 desc&lt;/Description&gt;&#xA;    &lt;Units&gt;3&lt;/Units&gt;&#xA;    &lt;Price&gt;2.98&lt;/Price&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Code&gt;1043&lt;/Code&gt;&#xA;    &lt;Description&gt;1043 desc&lt;/Description&gt;&#xA;    &lt;Units&gt;1&lt;/Units&gt;&#xA;    &lt;Price&gt;1.98&lt;/Price&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Code&gt;1044&lt;/Code&gt;&#xA;    &lt;Description&gt;1044 desc&lt;/Description&gt;&#xA;    &lt;Units&gt;1&lt;/Units&gt;&#xA;    &lt;Price&gt;1.99&lt;/Price&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Products]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="484,459" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="product" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,342" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,261" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[CInt(product.Item(&quot;Units&quot;))&gt;1]" DisplayName="If units &gt; 1" sap:VirtualizedContainerService.HintSize="388,150" sap2010:WorkflowViewState.IdRef="If_2">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="528,875" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Quantity of products'" sap:VirtualizedContainerService.HintSize="486,135" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[product.Item(&quot;Units&quot;).ToString]">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c44fd59-2f8f-4d18-9644-97478a60da08" InformativeScreenshot="d9d61ffe7b32b5c0bd7886228c19f46d" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,415" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                          <ui:CommentOut.Body>
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,336" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into &quot;*&quot;" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="*" Version="V3" />
+                                            </Sequence>
+                                          </ui:CommentOut.Body>
+                                        </ui:CommentOut>
+                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'tvnviewer.exe pos17-12'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="SendHotkey_20" Key="mul" KeyModifiers="None" SpecialKey="True">
+                                          <ui:SendHotkey.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4543c693-bcf8-43a3-8261-da069c610d77" InformativeScreenshot="9390daa9a523abdf6ea5361e63f45aa8" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:SendHotkey.Target>
+                                        </ui:SendHotkey>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17" />
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="400" DisplayName="Type Into 'product code/sku'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[product.Item(&quot;Code&quot;).ToString+ &quot;[k(numEnter)]&quot;]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d8f730b-8d0d-4bbf-82b9-24d7bdecf69b" InformativeScreenshot="d69f3ac1bc86b298070121fd4ee3492a" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - payment record" sap:VirtualizedContainerService.HintSize="548,1762" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,325" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into '+': totalize" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="+">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb6e0586-8a67-47e6-90ec-c347afb0213d" InformativeScreenshot="231643b26d3391c6877d9119cbb7ca29" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey '+': totalize" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="SendHotkey_23" Key="add" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1d807c6-1731-4d4e-86bd-2a9e60e78000" InformativeScreenshot="3227d468dd8968464a14d497b2b8fb8e" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'F5': Other payments" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="f5" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d06c52e-9826-47f8-90ff-20dcabb7b872" InformativeScreenshot="366bcfc2be88267654011ac66f565247" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'down': move one level down" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="down" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3fda7e0e-1b5d-4e57-9dd6-d622c48b7c50" InformativeScreenshot="95667f8a8ff776f583b1bac90b551910" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'F4': Paguelo facil" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="SendHotkey_14" Key="f4" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93d95bfb-3536-4bc1-b7b5-d97e652c7a5a" InformativeScreenshot="08e9748d2a31a35ae22be3dcdd47ecc1" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="500" DisplayName="Type Into 'Payment amount'" sap:VirtualizedContainerService.HintSize="486,135" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[InvoiceTotal+ &quot;[k(numEnter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ebe54574-0250-46d6-b8c0-f4d2fd51000e" InformativeScreenshot="8d402e7db16b23f972fc76b66d576d20" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'tvnviewer.exe pos17-12'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_21" Key="numenter" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3f87eb9-d092-4649-b24b-24f5ea4d17b1" InformativeScreenshot="6b720af0bba89440f638016a92dddd9d" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Payment Transaction Number'" sap:VirtualizedContainerService.HintSize="486,135" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="[InvoicePaymentTransaction+ &quot;[k(numEnter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c83548a5-1f2a-45fe-984a-f1dc19333410" InformativeScreenshot="422ddfd3cd231f520ab675f051e8cadf" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'tvnviewer.exe pos17-12'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_22" Key="numenter" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bf01b841-5107-4b0a-ad54-88676465a3cd" InformativeScreenshot="60dfc2e621bf70b6341f2570567eaefa" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - Client information" sap:VirtualizedContainerService.HintSize="548,1400" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="500" DisplayName="Type Into 'Client RUC'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[ClientRUC+ &quot;[k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd4ad580-532b-4504-8db9-70da094737d6" InformativeScreenshot="2ff2830f04eef45afd2f6423476bf2ea" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey 'tab key': move to DV" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_15" Key="enter" KeyModifiers="None" SpecialKey="False">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="48de2081-ae21-450c-85c5-75a3ec48c59c" InformativeScreenshot="d2b12f897ba5974b22a0afcbcf064983" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="500" DisplayName="Type Into 'Client DV'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="[ClientDV+ &quot;[k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e1cea36f-fd90-4763-baa0-58905b2f732b" InformativeScreenshot="db86f9cc8d6f27ff192955f441ef41e2" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey 'tab key': move next element" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_16" Key="enter" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="04249186-aeac-411d-a50d-06e2545d44a5" InformativeScreenshot="1866a921249ccbf034e7f7754c7eb172" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey 'tab key': move next element" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_17" Key="enter" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f328366d-f3f6-4713-8b9d-6843aa23b7db" InformativeScreenshot="fd64d915921e536e8d2a3b0d5a70e495" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="500" DisplayName="Type Into 'Client Name'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TypeInto_12" Text="[ClientName+ &quot;[k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="124704d2-6547-4230-8a54-fbf65442e46e" InformativeScreenshot="d40c3bebc6988467e8cddabd1ce570e7" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey 'tvnviewer.exe pos17-12'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_18" Key="enter" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b86ea38d-1e7f-4fa7-9357-b5c33ec88055" InformativeScreenshot="238d08300a2a1e40d087a5ac409e295c" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey 'tvnviewer.exe pos17-12'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_19" Key="enter" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c81b848b-d238-4cc5-80fe-b3b5739c16a2" InformativeScreenshot="6188ae54eed156416e6a57f92e3f6f7f" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  </Sequence>
+                  <Sequence DisplayName="Sequence - Cashier logout" sap:VirtualizedContainerService.HintSize="548,666" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="400" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="down" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4af59943-fec1-43df-a1a7-e67169052c64" InformativeScreenshot="56820f00ca4e04024f9987312cd42d80" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="400" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="f8" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f1afd14-b076-40b2-9eaf-6f9ea2a6c7ca" InformativeScreenshot="c40d5db1911f79696f6549bf2eb71377" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="400" DisplayName="Send Hotkey 'TvnWindowClass'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="f1" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="96abf27e-087c-4b21-b1c7-277d15bcf1e9" InformativeScreenshot="33a06ba3118d3d0128cf5f052e3281f4" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='*TightVNC Viewer' /&gt;&lt;wnd cls='TvnWindowClass' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                  </Sequence>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548,52" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,196" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;logout&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:MessageBox>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="548,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cf9ccb5f-f974-4093-9314-ccce0e36fe77" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="986, 1, 47, 30" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="c3bfd582-dfa0-4872-9836-c99409edc5a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAhCAYAAAB0v5O6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL0SURBVFhH3ZddbxJBFIb7M+ytrX+0VBHYZWHZZfnYXaClpaVQaS/0QqUmeuG9MdEYaxqTxls1qXwfzxmYFtZpmY0sUCZ5MsxCwvvsmTkLa1bSBSsxQnMhrTlsziQL7JoZp/UQen2DDYaan0AfkVJtBlsreUjEspBUcri2ccZ1NAtaNIPXc8M1zrSORyzQIhkGf02f1RX8rngRsvo+OGYNiukGFK0GlKwThmsc4/U6rMESjcFgIOTXz9/w5fM5vH3zHqUcvNF7TKJgooRRv5ZbGhmRhJd+vw8X377D89OXWC0XXJTZyZ7i3ABbP14OGVFwESRDXF39gZP6CzCUElbnGTgokk8ueJuJAt8FlyHOv16Abe1CXq8yEXuRMqKw0+AivV4Put0unL16h02qzGTyydpiZERBpzEuwmU+fvgEKTw7uURtMTKioDJ4RYjLyx+ghtMocgRZrXp/ZLjIuEyn04HYEwMrU2XMVUYUUobxqnAZEiHUsAmZ+CFyMHuZhxub0Dw7G61uBg/2utmEjc1HE2Fvw3tOuAiXabVaEN1OQUY7hLRSmb0MiTxYX/9HiMKRCL1Hsze4CFkZC6tixvaD2WYiIb8ihHxlqmCpAWwzPrgQhf8fkdtk2u32SEaHbOKInZtAGwAX8itCyMpEtpPBbjM+5iITmoPMvLYZVSbQM8NFaObh/ArJytCZmUtr9gaUFRoXEclQJ7uWeWzgv2CUmfVDk4LQA5FE+NoLidCDVfQex49MBFuzGa+AqQZwZigMH96QsviReRrSIa0dYGUC2GbjQxRUBr8ygVVmfIiCyuBLBhtAKlYGPbobnIwopAxeEa8MiXhlDGVvRWTwoWmqZazOzv2XCW8lQI+UQAsXVkAmlGCVMZSVODPDbRaYjCikDCIRgiSoi/FONiETSrEGEFhrFgWVQSRC3CUTpucMiqyGzNZQJq3iL4BisQizplAozBTXdcFxnAls22aQDP2UYTKjmznTIbrrMoiqQkzbZkOZCvwFtUDbfT4L4VkAAAAASUVORK5CYII=" InformativeScreenshot="a3c41801068267c00b4d4baf43d3004b.png" ScopeSelectorArgument="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='pos17-12 - TightVNC Viewer' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="940, 1, 46, 30" ElementType="Button" FriendlyName="'Maximize'" FullSelectorArgument="&lt;ctrl name='Maximize' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Maximize' role='push button' automationid='' check:text='Maximize' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADtSURBVFhH7ZXLDoIwEEUbvpd/8S0PpVTBP2LHlj2fcJ2pYFyIG5s4NnOSG9rOEHogKcZmV1QUV7S4lDfUeQNL4bkraJ61sFlD6zTPud4+xlNtrttjg+pwoVz9mNe5x2e+76WXc+b+Iz2fcto7lLsaJV0LuuZbi2JbP5PP2VifjLOesrIwiAQVkYaKSENFpKEi0ggukqYpkiSBMeZtuMY9oQkuwhvtug7jOL5N3/e+JzTBRfit84Y/wT2hUZElVORLVGSJaET4aOUjdolhGP7j+I3mh/grVEQaKiINFZGGikhDRaRhnHOIIZF8EeAOCrvTvrm3cvkAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="2622, 140, 432, 309" FilePath="C:\Program Files\TightVNC\tvnviewer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGOSURBVFhH3ZILboQwEEM5OkfjZixe5jXOkBBWbEVVS1Y7X3vCThvWhzmtT+H/GViW5cAzXDYwbz1iDxKa55mFFZXvGYmesjgLjWItRqhQRmBdy0Yif7xsJAxYrCv3F1BuJ3Gp7b2OyJXkSJjYL+cqtTk9J7RnkgHQEwZXDDiFSwZGwjlmYesTwI8+AchCPfhVhRKDdY3LQeTHQiNosV/pVD4Lg+i5bwBIKPMMlYHWMHSc1T7FjwEtiuBAPSFo9d1B7ChLWApd3HFW66H1WqFTDOQfUkuEV9Bf70eAHLMe00st4voZaYLZOYtAq5e6iwOPY642wBD0YSHnvFf0FyLnUN6Nbjw2MAgB5hyKWzN+SA9RPzbkV8Cx8n69wHw24XEPUT825GUSJYcZ4PNu3Hf4jP4njnrbIcOQ5Q5E/FW8z00oT+2SAZqdLiRokXIsBN5HD/Te2Ns2ICAMs9BdxN6+ATlG3K/6FoYGdHHTgGbu8r1mYEDgFSqw5A7fay4Y0Ct8+9uDSwZ+E3/HwHOc1hfH/ocaKCl+4AAAAABJRU5ErkJggg==" InformativeScreenshot="655489086c8353f058bf06ce750125af.png" Selector="&lt;wnd app='tvnviewer.exe'/&gt;" Title="New TightVNC Connection" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>
