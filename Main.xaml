@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="947,844" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="947,9173" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -52,6 +52,7 @@
       <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
       <x:String>UiPath.Database</x:String>
       <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -117,9 +118,10 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="548,779" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="804,9108" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Products" />
       <Variable x:TypeArguments="x:String" Name="Total" />
@@ -131,35 +133,37 @@
       <Variable x:TypeArguments="x:String" Default="00" Name="ClientDV" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="DBConnection" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Invoices" />
+      <Variable x:TypeArguments="x:String" Name="SqlPassword" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="486,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=172.0.0.65;Initial Catalog=VISION_WEB;Persist Security Info=True;User ID=BotPos;Password=BotPos.2023;Encrypt=False" DatabaseConnection="[DBConnection]" />
-    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dt_Invoices]" DisplayName="Run query" ExistingDbConnection="[DBConnection]" sap:VirtualizedContainerService.HintSize="486,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="Select [ID_ORDER_HEADER]&#xD;&#xA;      ,[ID_EC_PRODUCT]&#xD;&#xA;      ,[NAME]&#xD;&#xA;      ,[PRODUCT_ID]&#xD;&#xA;      ,[QUANTITY]&#xD;&#xA;      ,[QUANTITY_DISPATCHED]&#xD;&#xA;      ,[SUBTOTAL]&#xD;&#xA;      ,(Case When ECP.PRODUCT_TYPE In ('S', 'V2') THEN OD.[SKU]&#xD;&#xA;             Else ECP.SKU_FATHER End) As PRODUCT_CODE&#xD;&#xA;      ,OD.[PRICE] As EC_PRICE&#xD;&#xA;     From [VISION_WEB].[dbo].[GP_EC_ORDER_DETAIL] OD&#xD;&#xA;  INNER Join [VISION_WEB].[dbo].GP_EC_PRODUCT ECP On OD.SKU = ECP.SKU&#xD;&#xA;  Where ID_ORDER_HEADER = 7621">
+    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="742,25" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqiSR0avEd069BROwqNUnDgAAAAACAAAAAAADZgAAwAAAABAAAAASsKsHp7jHLtRg0NrRKb/8AAAAAASAAACgAAAAEAAAAHhaQfW9TcKsgFTk/EeIFngQAAAArqFNTpo7WmfL58JloKgJpRQAAABbWnqay8kC6V3DmQrW1cLHAfpPgg==" Result="[SqlPassword]" />
+    <ui:DatabaseConnect DisplayName="Connect to database - vision" sap:VirtualizedContainerService.HintSize="742,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="[&quot;Data Source=172.0.0.65;Initial Catalog=VISION_WEB;Persist Security Info=True;User ID=BotPos;Password=&quot;+ SqlPassword + &quot;;Encrypt=False&quot;]" DatabaseConnection="[DBConnection]" />
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dt_Invoices]" DisplayName="Run query" ExistingDbConnection="[DBConnection]" sap:VirtualizedContainerService.HintSize="742,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="Select [ID_ORDER_HEADER]&#xA;      ,[ID_EC_PRODUCT]&#xA;      ,[NAME]&#xA;      ,[PRODUCT_ID]&#xA;      ,[QUANTITY]&#xA;      ,[QUANTITY_DISPATCHED]&#xA;      ,[SUBTOTAL]&#xA;      ,(Case When ECP.PRODUCT_TYPE In ('S', 'V2') THEN OD.[SKU]&#xA;             Else ECP.SKU_FATHER End) As PRODUCT_CODE&#xA;      ,OD.[PRICE] As EC_PRICE&#xA;     From [VISION_WEB].[dbo].[GP_EC_ORDER_DETAIL] OD&#xA;  INNER Join [VISION_WEB].[dbo].GP_EC_PRODUCT ECP On OD.SKU = ECP.SKU&#xA;  Where ID_ORDER_HEADER = 7621">
       <ui:ExecuteQuery.Parameters>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteQuery.Parameters>
     </ui:ExecuteQuery>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[dt_Invoices.Rows.Count.ToString]" />
-    <ui:DatabaseDisconnect DatabaseConnection="[DBConnection]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="486,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,242" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="742,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[dt_Invoices.Rows.Count.ToString]" />
+    <ui:DatabaseDisconnect DatabaseConnection="[DBConnection]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="742,25" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="742,8506" sap2010:WorkflowViewState.IdRef="CommentOut_15">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="Sequence_31">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="706,8427" sap2010:WorkflowViewState.IdRef="Sequence_31">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: New TightVNC Connection" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="cf9ccb5f-f974-4093-9314-ccce0e36fe77" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: New TightVNC Connection" sap:VirtualizedContainerService.HintSize="644,8316" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="cf9ccb5f-f974-4093-9314-ccce0e36fe77" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do - main flow" sap:VirtualizedContainerService.HintSize="610,6696" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do - main flow" sap:VirtualizedContainerService.HintSize="610,8025" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -199,10 +203,10 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <Sequence DisplayName="Sequence - Cashier login" sap:VirtualizedContainerService.HintSize="548,81" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Sequence - Cashier login" sap:VirtualizedContainerService.HintSize="548,1410" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -357,13 +361,13 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
                               <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,261" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,293" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[CInt(product.Item(&quot;Units&quot;))&gt;1]" DisplayName="If units &gt; 1" sap:VirtualizedContainerService.HintSize="388,150" sap2010:WorkflowViewState.IdRef="If_2">
+                                  <If Condition="[CInt(product.Item(&quot;Units&quot;))&gt;1]" DisplayName="If units &gt; 1" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="If_2">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -848,7 +852,7 @@
             </uix:NApplicationCard.TargetApp>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
